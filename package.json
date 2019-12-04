@@ -1,31 +1,26 @@
 {
-  "name": "discord.js-heroku",
+  "name": "maccabotjs",
   "version": "1.0.0",
-  "description": "An in-depth guide on deploying your Discord.js bot on Heroku",
+  "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "8.x",
-    "npm": "*"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/synicalsyntax/discord.js-heroku.git"
+    "url": "git+https://github.com/charliekmcmahon/maccabot.git"
   },
-  "keywords": [
-    "heroku",
-    "discord.js"
-  ],
-  "author": "synicalsyntax",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/synicalsyntax/discord.js-heroku/issues"
+    "url": "https://github.com/charliekmcmahon/maccabot/issues"
   },
-  "homepage": "https://github.com/synicalsyntax/discord.js-heroku#readme",
+  "homepage": "https://github.com/charliekmcmahon/maccabot#readme",
   "dependencies": {
-    "discord.js": "^11.3.0"
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "node-opus": "^0.3.3"
   }
 }
