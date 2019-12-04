@@ -24,7 +24,7 @@ bot.on('message', message => {
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.playFile('/Users/charliemcmahon/MaccaBot/music.mp3');
+     const dispatcher = connection.playFile('music.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -37,7 +37,7 @@ bot.on('message', message => {
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.playFile('/Users/charliemcmahon/MaccaBot/bruh.mp3');
+     const dispatcher = connection.playFile('bruh.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -50,7 +50,7 @@ bot.on('message', message => {
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.playFile('/Users/charliemcmahon/MaccaBot/stop.mp3');
+     const dispatcher = connection.playFile('stop.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
