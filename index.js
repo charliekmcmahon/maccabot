@@ -38,7 +38,7 @@ bot.on('message', message => {
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
-     delay(500);
+     delay(2000);
      const dispatcher = connection.playFile('bruh.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
