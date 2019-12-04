@@ -1,31 +1,18 @@
 const Discord = require('discord.js');
-
 const client = new Discord.Client();
 
- 
-console.log('Code started')
-console.log(process.env.BOT_TOKEN)
+console.log('Code Started Running')
 
 client.on('ready', () => {
-
-    console.log('I am ready!');
-
+  console.log(`Logged in as ${client.user.tag}!`);
 });
 
- 
-
-client.on('message', message => {
-
-    if (message.content === 'ping') {
-
-       message.reply('pong');
-
-       }
-
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
 });
-
- 
-
-// THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//BOT_TOKEN is the Client Secret
+
+
