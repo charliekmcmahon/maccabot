@@ -4,6 +4,7 @@ const client = new Discord.Client();
 
  
 console.log('Code started')
+console.log(process.env.BOT_TOKEN)
 
 client.on('ready', () => {
 
