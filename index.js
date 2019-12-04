@@ -134,4 +134,4 @@ message.channel.send("Imagine that you have 0 cookies and you split them between
 });
 
 
-bot.login('5kVhNT0yu67nV7X6cn2SAXqUCqVRL_lu');
+bot.login(process.env.TOKEN);
