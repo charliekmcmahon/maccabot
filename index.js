@@ -1,5 +1,6 @@
 var Discord = require('discord.js');
-//const fetch = require('node-fetch');
+const fetch = require('node-fetch');
+const delay = require('delay');
 var bot = new Discord.Client();
 var isReady = true;
 
@@ -11,14 +12,14 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: 'over RaccaNetwork',
+            name: '.',
             type:3,
         }
     });
 });
 
 bot.on('message', message => {
-  if (isReady && message.content === 'play alan')
+  if (isReady && message.content === 'play random music')
   {
   isReady = false;
   var voiceChannel = message.member.voiceChannel;
@@ -37,6 +38,7 @@ bot.on('message', message => {
   var voiceChannel = message.member.voiceChannel;
   voiceChannel.join().then(connection =>
   {
+     await delay(500);
      const dispatcher = connection.playFile('bruh.mp3');
      dispatcher.on("end", end => {
        voiceChannel.leave();
