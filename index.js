@@ -3,6 +3,12 @@ var Discord = require('discord.js');
 var bot = new Discord.Client();
 var isReady = true;
 
+console.log('Code has started')
+
+bot.login(process.env.TOKEN);
+
+console.log ('Got past login')
+
 bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
@@ -132,6 +138,3 @@ message.channel.send("Imagine that you have 0 cookies and you split them between
 //}
 //fetch('https://maker.ifttt.com/trigger/button_toggled/with/key/hLpXhAkwzhMvtQGs_t9SFUb-J6JkvRZmviaYr5Ey62e')
 });
-
-
-bot.login(process.env.TOKEN);
