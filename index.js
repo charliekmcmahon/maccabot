@@ -12,8 +12,8 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: 'raccanetwork.ddns.net:443',
-            type:3,
+            name: 'mc.beastvr.xyz:443',
+            type:1,
         }
     });
 });
