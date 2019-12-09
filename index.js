@@ -12,7 +12,7 @@ bot.on('ready', () => {
     bot.user.setStatus('available')
     bot.user.setPresence({
         game: {
-            name: ' ',
+            name: 'raccanetwork.ddns.net:443',
             type:3,
         }
     });
