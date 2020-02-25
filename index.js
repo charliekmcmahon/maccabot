@@ -36,6 +36,25 @@ bot.on('ready', () => {
     });
 });
 
+const cheerio = require('cheerio');
+  const puppeteer = require('puppeteer');
+
+  const url = 'https://charliekmcmahon.github.io/mc-player-counter-master/examples/';
+
+  puppeteer
+    .launch()
+    .then(browser => browser.newPage())
+    .then(page => {
+      return page.goto(url).then(function() {
+        return page.content();
+      });
+    })
+    .then(html => {
+      const $ = cheerio.load(html);
+      console.log(html);
+    })
+    .catch(console.error);
+
 bot.on('message', message => {
   if (isReady && message.content === 'play random music')
   {
