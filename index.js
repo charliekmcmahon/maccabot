@@ -1,4 +1,5 @@
 var Discord = require('discord.js');
+var phantom = require('phantom');
 const fetch = require('node-fetch');
 const delay = require('delay');
 var bot = new Discord.Client();
@@ -7,6 +8,23 @@ var isReady = true;
 console.log('js now running')
 
 bot.login(process.env.TOKEN);
+
+phantom.create(function (ph) {
+  ph.createPage(function (page) {
+    var url = "http://www.bdtong.co.kr/index.php?c_category=C02";
+    page.open(url, function() {
+      page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
+        page.evaluate(function() {
+          $('.listMain > li').each(function () {
+            console.log($(this).find('a').attr('href'));
+          });
+        }, function(){
+          ph.exit()
+        });
+      });
+    });
+  });
+});
 
 bot.on('ready', () => {
     bot.user.setStatus('available')
